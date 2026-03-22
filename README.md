@@ -66,27 +66,31 @@ Install the following software:
 
 ## 1. Clone Repository
 
+```bash
 git clone <backend-repo-url>
 cd backend
+```
 
 ---
 
 ## 2. Install Dependencies
 
+```
 npm install
+```
 
 ---
 
 ## 3. Setup PostgreSQL Database
 
 Create the database:
-
+```
 createdb subscription_db
-
+```
 Import the database schema:
-
+```
 psql subscription_db < schema.sql
-
+```
 This will create the required table structure.
 
 ---
@@ -95,6 +99,7 @@ This will create the required table structure.
 
 Edit `db.js` if needed:
 
+```Javascript
 const pool = new Pool({
 user: "postgres",
 host: "localhost",
@@ -102,16 +107,16 @@ database: "subscription_db",
 password: "",
 port: 5432,
 });
-
+```
 ---
 
 ## 5. Run the Backend Server
-
+```
 node server.js
-
+```
 Server will start on:
 
-http://localhost:5000
+`http://localhost:5000`
 
 ---
 
@@ -122,7 +127,7 @@ Create Subscription
 POST /api/subscriptions
 
 Example body:
-
+```
 {
 "user_email": "[user@email.com](mailto:user@email.com)",
 "plan_name": "Netflix",
@@ -131,7 +136,7 @@ Example body:
 "monthly_cost": 9.99,
 "status": "Active"
 }
-
+```
 ---
 
 # Testing API
