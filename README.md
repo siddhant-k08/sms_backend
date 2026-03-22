@@ -81,7 +81,22 @@ npm install
 
 ---
 
-## 3. Setup PostgreSQL Database
+## 3. Environment Configuration
+
+Create a `.env` file in the root directory and add the following variables (refer to `.env.example`):
+
+```env
+PORT=5000
+DB_USER=your_db_user
+DB_HOST=localhost
+DB_NAME=subscription_db
+POSTGRES_PASSWORD=your_postgres_password
+DB_PORT=5432
+```
+
+---
+
+## 4. Setup PostgreSQL Database
 
 Create the database:
 ```
