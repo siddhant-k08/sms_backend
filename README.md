@@ -127,7 +127,7 @@ Create Subscription
 POST /api/subscriptions
 
 Example body:
-```
+```json
 {
 "user_email": "[user@email.com](mailto:user@email.com)",
 "plan_name": "Netflix",
